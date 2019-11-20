@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>刘伟康の博客</title>
+  <title>Markdown语法记录 | 刘伟康の博客</title>
   
   <meta name="keywords" content="个人博客">
   
@@ -48,7 +48,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover page half'>
+    <cover class='cover post half'>
       
         
   <h1 class='title'>刘伟康のBLOG</h1>
@@ -283,7 +283,7 @@
       <div class='l_main'>
   
 
-  <article id="page" class="post white-box article-type-page" itemscope itemprop="blogPost">
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
     
 
 
@@ -295,8 +295,8 @@
         
   
     <h1 class="title">
-      <a href="/live2d-widget/README.html">
-        2019-10-31
+      <a href="/2019/11/21/Markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/">
+        Markdown语法记录
       </a>
     </h1>
   
@@ -327,7 +327,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-10-31</p>
+    <p>2019-11-21</p>
   </a>
 </div>
 
@@ -335,6 +335,14 @@
         
           
             
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E5%AD%A6%E4%B9%A0/markdown/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>学习&nbsp;/&nbsp;markdown</p>
+    </a>
+  </div>
+
 
           
         
@@ -371,65 +379,275 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <h1 id="Live2D-Widget"><a href="#Live2D-Widget" class="headerlink" title="Live2D Widget"></a>Live2D Widget</h1><h2 id="特性-Feature"><a href="#特性-Feature" class="headerlink" title="特性 Feature"></a>特性 Feature</h2><p>在网页中添加Live2D看板娘。与PJAX兼容，支持无刷新加载。<br>Add Live2D widget to web page. Compatible with PJAX.</p>
-<p><strong>警告：不支持IE。</strong><br><strong>WARNING: DO NOT SUPPORT IE.</strong></p>
-<h2 id="示例-Demo"><a href="#示例-Demo" class="headerlink" title="示例 Demo"></a>示例 Demo</h2><p>在<a href="https://zhangshuqiao.org" target="_blank" rel="noopener">米米的博客</a>的左下角可查看效果。需要使用支持WebGL的现代浏览器浏览。</p>
-<p><img src="assets/screenshot-1.png" alt=""><br><img src="assets/screenshot-2.png" alt=""><br><img src="assets/screenshot-3.png" alt=""></p>
-<p>这个仓库中也提供了两个Demo，即</p>
+        <h3 id="此文档在更新时可能会被覆盖或删除"><a href="#此文档在更新时可能会被覆盖或删除" class="headerlink" title="此文档在更新时可能会被覆盖或删除"></a>此文档在更新时可能会被覆盖或删除</h3><blockquote>
+<p>在使用Markdown之前，你可能需要先了解一下关于markdown的简单语法。</p>
+</blockquote>
+<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><ul>
+<li>使用 <code>#</code> 表示标题，一级标题使用一个 <code>#</code> ，二级标题使用两个 <code>##</code> ，以此类推，共有六级标题。</li>
+<li>使用 <code>=====</code> 表示高阶标题，使用 <code>---------</code> 表示次阶标题。</li>
+</ul>
+<ol>
+<li><code>#</code> 和标题之间记得有个空格哦。</li>
+<li><code>====</code> 和 <code>----</code> 表示标题时，大于等于2个都可以表示。</li>
+</ol>
+<h3 id="2-引用"><a href="#2-引用" class="headerlink" title="2.引用"></a>2.引用</h3><p>使用 <code>&gt;</code> 表示引用， <code>&gt;&gt;</code> 表示引用里面再套一层引用，依次类推。</p>
+<ol>
+<li>如果 <code>&gt;</code> 和 <code>&gt;&gt;</code> 嵌套使用的话，从 <code>&gt;&gt;</code> 退到 <code>&gt;</code> 时，必须之间要加一个空格或者 <code>&gt;</code> 作为过渡，否则默认为下一行和上一行是同一级别的引用。如示例所示。</li>
+<li>引用标记里可以使用其他标记，如：有序列表或无序列表标记，代码标记等。</li>
+</ol>
+<p>示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一级引用</span><br><span class="line">&gt;&gt;这是二级引用</span><br><span class="line">&gt;&gt;&gt; 这是三级引用</span><br><span class="line"></span><br><span class="line">&gt;这是一级引用</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这是一级引用</p>
+<blockquote>
+<p>这是二级引用</p>
+<blockquote>
+<p>这是三级引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>这是一级引用</p>
+</blockquote>
+<h3 id="3-代码块"><a href="#3-代码块" class="headerlink" title="3 代码块"></a>3 代码块</h3><p>使用3个连续的` 符号包围起来表示代码块。</p>
+<ol>
+<li>本文档所有使用讲解Markdown语法标记示例的地方都是使用代码块标记的。</li>
+<li>代码块前后都得有换行哦</li>
+</ol>
+<p>示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function() &#123;</span><br><span class="line">  $(&apos;pre code&apos;).each(function(i, block) &#123;</span><br><span class="line">    hljs.highlightBlock(block);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-行内代码"><a href="#4-行内代码" class="headerlink" title="4 行内代码"></a>4 行内代码</h3><p>使用``表示行内代码。本页部分文字中间的英文字母就是使用行内代码标记标记的。</p>
+<p>示例</p>
+<p>这是 <code>javascript</code> 代码</p>
+<h4 id="5-链接"><a href="#5-链接" class="headerlink" title="5 链接"></a>5 链接</h4><p>使用 <code>[](link)</code> 表示行内链接。其中：</p>
 <ul>
-<li><a href="https://mi.js.org/live2d-widget/demo/demo1.html" target="_blank" rel="noopener">demo1.html</a> ，展现基础效果</li>
-<li><a href="https://mi.js.org/live2d-widget/demo/demo2.html" target="_blank" rel="noopener">demo2.html</a> ，仿NPM的登陆界面</li>
+<li><code>[]</code> 内的内容为要添加链接的文字。</li>
+<li><code>link</code> 为链接地址。</li>
 </ul>
-<h2 id="依赖-Dependencies"><a href="#依赖-Dependencies" class="headerlink" title="依赖 Dependencies"></a>依赖 Dependencies</h2><p>本插件需要jQuery和font-awesome支持，请确保它们已在页面中加载，例如在<code>&lt;head&gt;</code>中加入：<br>jQuery and font-awesome is required for this plugin. You can add this to <code>&lt;head&gt;</code>:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>否则无法正常显示。（如果你的网页已经加载了jQuery，就不要重复加载了）</p>
-<h2 id="使用-Usage"><a href="#使用-Usage" class="headerlink" title="使用 Usage"></a>使用 Usage</h2><p>你可以直接这样使用：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>将这一行代码加入<code>&lt;head&gt;</code>或<code>&lt;body&gt;</code>，即可看到效果。如果你的网站启用了PJAX，由于看板娘不必每页刷新，因此需要注意将相关脚本放到PJAX刷新区域之外。</p>
-<p>换句话说，如果你是小白，或者只需要最基础的功能，就只需要：</p>
+<p>示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我觉得[Markdown](https://appsto.re/cn/jK8Cbb.i)真是个棒棒哒的编辑器😊.</span><br></pre></td></tr></table></figure>
+
+<p>我觉得<a href="https://appsto.re/cn/jK8Cbb.i" target="_blank" rel="noopener">Markdown</a>真是个棒棒哒的编辑器😊.</p>
+<h3 id="6-数学公式"><a href="#6-数学公式" class="headerlink" title="6 数学公式"></a>6 数学公式</h3><p><code>$</code>包围的区块将会解析为数学公式，连续的<code>$$</code>将独占一行并居中显示</p>
+<p>示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当 $a \ne 0$, 此方程式有两个解 $ax^2 + bx + c = 0$，他们是 </span><br><span class="line"></span><br><span class="line">$$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.$$</span><br></pre></td></tr></table></figure>
+
+<p>当 $a \ne 0$, 此方程式有两个解 $ax^2 + bx + c = 0$，他们是 </p>
+<p>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
+<h3 id="7-导入图片"><a href="#7-导入图片" class="headerlink" title="7 导入图片"></a>7 导入图片</h3><p>使用 <code>![Alt text](/path/to/img.jpg)</code> 导入图片。其中：</p>
 <ul>
-<li>把这一行代码，连同前面的两行代码，一起放到html的<code>&lt;head&gt;</code>中即可；</li>
-<li>如果页面是用各种模版引擎、php、asp生成的，也要自行修改，方法类似，只是可能略为麻烦。</li>
+<li><code>Alt text</code> 为如果图片无法显示时显示的文字；</li>
+<li><code>/path/to/img.jpg</code> 为图片所在路径；</li>
 </ul>
-<p><strong>但是！我们强烈推荐自己进行配置，否则很多功能是不完整的，并且可能产生问题！</strong><br>如果你有兴趣自己折腾的话，请看下面的详细说明。</p>
-<h3 id="Using-CDN"><a href="#Using-CDN" class="headerlink" title="Using CDN"></a>Using CDN</h3><p>如果要自定义有关内容，可以把这个仓库Fork一份，然后进行修改。这时，使用方法对应地变为</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/gh/username/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>将<code>username</code>替换为你的GitHub用户名即可。</p>
-<h3 id="Self-host"><a href="#Self-host" class="headerlink" title="Self-host"></a>Self-host</h3><p>你也可以直接把这些文件放到服务器上，而不是通过CDN加载。</p>
+<p>点击辅助键盘中的添加图片按钮可快捷添加图片</p>
+<ol>
+<li>==本地引用==是图片直接存储到本地通过相对路径引用，无需网络连接</li>
+<li>==上传图片==将把图片上传至图床，这样在文档或图片移动时认可访问图片</li>
+</ol>
+<p>示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Markdown](https://i.loli.net/2019/11/16/h4lWxQbjvUwN7XZ.jpg)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2019/11/16/h4lWxQbjvUwN7XZ.jpg" alt="Markdown"></p>
+<h3 id="8-Todo-List"><a href="#8-Todo-List" class="headerlink" title="8 Todo List"></a>8 Todo List</h3><p>小写x表示已完成， 空格表示未完成</p>
 <ul>
-<li>如果你可以通过ssh访问你的主机，请把整个项目克隆到服务器上。执行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/your/webroot</span><br><span class="line"><span class="comment"># Clone this repository</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/stevenjoezhang/live2d-widget.git</span><br></pre></td></tr></table></figure></li>
-<li>如果你的主机无法用ssh连接（例如一般的虚拟主机），请选择<code>Download ZIP</code>，然后通过ftp上传到主机上，再解压到网站的目录下。</li>
-<li>如果你是通过Hexo等工具部署的静态博客，请选择<code>Download ZIP</code>，然后解压到本地的博客目录下，例如<code>source</code>下与<code>_posts</code>同级的目录。重新部署博客时，相关文件就会自动上传到对应的目录。（还需要在Hexo主题相关的swig或ejs模版中正确配置路径，才可以加载）</li>
+<li><input checked="" disabled="" type="checkbox"> 支持数学公式</li>
+<li><input checked="" disabled="" type="checkbox"> 支持TodoList</li>
+<li><input checked="" disabled="" type="checkbox"> 支持自定义样式</li>
+<li><input disabled="" type="checkbox"> 支持自定义图床</li>
 </ul>
-<p>这样，整个项目就可以通过你的服务器IP或者域名从公网访问了。你可以试试能否正常地通过浏览器打开<code>autoload.js</code>和<code>live2d.min.js</code>等文件。<strong>（最好还要确定一下这些文件的内容是正确的，有时由于字符集的问题，文件中可能出现乱码；此时需要重新下载）</strong><br>如果没有问题，接下来需要修改一些配置。（需要通过服务器上的<code>vim</code>，<code>emacs</code>，cPanel文件管理器等工具修改；你也可以先在本地完成这一步骤，再上传到服务器上）<br>修改<code>autoload.js</code>中的参数<code>live2d_path</code>为<code>live2d-widget</code>这一文件夹在公网上的路径。比如说，如果你可以通过</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.example.com/path/to/live2d-widget/live2d.min.js</span><br></pre></td></tr></table></figure>
-<p>访问到<code>live2d.min.js</code>，那么就把<code>live2d_path</code>的值修改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.example.com/path/to/live2d-widget/</span><br></pre></td></tr></table></figure>
-<p>路径末尾的<code>/</code>一定要加上。具体可以参考<code>autoload.js</code>内的注释。<br>完成后，在你要添加看板娘的界面加入</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.example.com/path/to/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>就可以加载了。</p>
-<h2 id="目录结构-Files"><a href="#目录结构-Files" class="headerlink" title="目录结构 Files"></a>目录结构 Files</h2><ul>
-<li><code>waifu-tips.json</code>中包含了触发条件（<code>selector</code>，选择器）和触发时显示的文字（<code>text</code>）；</li>
-<li><code>waifu.css</code>是看板娘的样式表。</li>
-</ul>
-<p>源文件是对Hexo的NexT主题有效的，为了适用于你自己的网页，可能需要自行修改，或增加新内容。<br><strong>警告：作者不对包括但不限于<code>waifu-tips.json</code>和<code>waifu-tips.js</code>文件中的内容负责，请自行确保它们是合适的。</strong></p>
-<p>如果有任何疑问，欢迎提Issue。如果有任何修改建议，欢迎提PR。</p>
-<h2 id="鸣谢-Credits"><a href="#鸣谢-Credits" class="headerlink" title="鸣谢 Credits"></a>鸣谢 Credits</h2><p>代码自这篇博文魔改而来：<br><a href="https://www.fghrsh.net/post/123.html" target="_blank" rel="noopener">https://www.fghrsh.net/post/123.html</a><br>相比初始的版本，这个仓库增加了一些功能，并优化了提示展现机制。</p>
-<p>更多内容可以参考：<br><a href="https://zhangshuqiao.org/2018-07/在网页中添加Live2D看板娘/" target="_blank" rel="noopener">https://zhangshuqiao.org/2018-07/在网页中添加Live2D看板娘/</a><br><a href="https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02" target="_blank" rel="noopener">https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02</a><br><a href="https://github.com/summerscar/live2dDemo" target="_blank" rel="noopener">https://github.com/summerscar/live2dDemo</a></p>
-<p>还可以自行搭建后端api，并增加模型（需要修改的内容比较多，此处不再赘述）：<br><a href="https://github.com/fghrsh/live2d_api" target="_blank" rel="noopener">https://github.com/fghrsh/live2d_api</a><br><a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">https://github.com/xiazeyu/live2d-widget-models</a><br><a href="https://github.com/xiaoski/live2d_models_collection" target="_blank" rel="noopener">https://github.com/xiaoski/live2d_models_collection</a></p>
-<p>除此之外，还有桌面版本：<br><a href="https://github.com/amorist/platelet" target="_blank" rel="noopener">https://github.com/amorist/platelet</a><br><a href="https://github.com/akiroz/Live2D-Widget" target="_blank" rel="noopener">https://github.com/akiroz/Live2D-Widget</a></p>
-<p>另外，点击看板娘的纸飞机按钮，会出现一个彩蛋，这来自于<a href="http://www.websiteasteroids.com" target="_blank" rel="noopener">WebsiteAsteroids</a>。</p>
-<h2 id="更多-More"><a href="#更多-More" class="headerlink" title="更多 More"></a>更多 More</h2><p>Live2D官方网站：<br><a href="https://www.live2d.com/en/" target="_blank" rel="noopener">https://www.live2d.com/en/</a><br><a href="https://live2d.github.io" target="_blank" rel="noopener">https://live2d.github.io</a></p>
-<p>可以在官方网站下载、打包SDK，以获取更多的功能。具体操作是：</p>
+<h3 id="9-粗体，斜体，高亮和删除线"><a href="#9-粗体，斜体，高亮和删除线" class="headerlink" title="9 粗体，斜体，高亮和删除线"></a>9 粗体，斜体，高亮和删除线</h3><ol>
+<li>使用 <code>**</code> 或者 <code>__</code> 表示<strong>粗体</strong>。</li>
+<li>使用 <code>*</code> 或者 <code>_</code> 表示<em>斜体</em>。</li>
+<li>使用<code>==</code>表示==高亮==</li>
+<li>使用<code>~~</code>表示<del>删除</del></li>
+<li><code>*</code>，<code>=</code> 或 <code>_</code> 的后面<strong>不要跟空格哦</strong></li>
+</ol>
+<h3 id="10-列表"><a href="#10-列表" class="headerlink" title="10 列表"></a>10 列表</h3><p>使用 <code>1. 2. 3.</code> 表示有序列表，使用 <code>*</code> 或 <code>-</code> 或 <code>+</code> 表示无序列表。</p>
+<ol>
+<li>无序列表或有序列表标记和后面的文字之间要有一个空格隔开。</li>
+<li>有序列表标记不是按照你写的数字进行显示的，而是根据当前有序列表标记所在位置显示的，如示例1所示。</li>
+<li>无序列表的项目符号是按照实心圆、空心圆、实心方格的层级关系递进的，如例2所示。通常情况下，同一层级使用同一种标记表示，便于自己查看和管理。</li>
+</ol>
+<h4 id="例1：有序列表"><a href="#例1：有序列表" class="headerlink" title="例1：有序列表"></a>例1：有序列表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  第一点</span><br><span class="line">2.  第二点</span><br><span class="line">4.  第三点</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>第一点</li>
+<li>第二点</li>
+<li>第三点</li>
+</ol>
+<h4 id="例2：无序列表"><a href="#例2：无序列表" class="headerlink" title="例2：无序列表"></a>例2：无序列表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+ 一级无序列表内容</span><br><span class="line">	* 二级无序列表内容</span><br><span class="line">	- 二级无序列表内容</span><br><span class="line">		- 三级无序列表内容</span><br><span class="line">		- 三级无序列表内容</span><br><span class="line">+ 一级无序列表内容</span><br><span class="line">	- 二级无序列表内容</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>点击Cubism SDK for Web，下载相关文件；</li>
-<li>解压并进入目录，执行<code>npm install</code>；</li>
-<li>执行<code>npm run build-sample</code>。</li>
+<li>一级无序列表内容<ul>
+<li>二级无序列表内容</li>
 </ul>
-<h2 id="许可证-License"><a href="#许可证-License" class="headerlink" title="许可证 License"></a>许可证 License</h2><p>Released under the GNU General Public License v3<br><a href="http://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">http://www.gnu.org/licenses/gpl-3.0.html</a></p>
-<h2 id="更新-Update"><a href="#更新-Update" class="headerlink" title="更新 Update"></a>更新 Update</h2><p>2018年10月31日，由fghrsh提供的原API停用，请更新至新地址。参考文章：<br><a href="https://www.fghrsh.net/post/170.html" target="_blank" rel="noopener">https://www.fghrsh.net/post/170.html</a></p>
+<ul>
+<li>二级无序列表内容<ul>
+<li>三级无序列表内容</li>
+<li>三级无序列表内容</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>一级无序列表内容<ul>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-分割线"><a href="#11-分割线" class="headerlink" title="11 分割线"></a>11 分割线</h3><p>使用 <code>---</code> 或者 <code>***</code> 或者 <code>* * *</code> 表示水平分割线。</p>
+<ol>
+<li>只要 <code>*</code> 或者 <code>-</code> 大于等于三个就可组成一条平行线。</li>
+<li>使用 <code>---</code> 作为水平分割线时，要在它的前后都空一行，防止 <code>---</code> 被当成标题标记的表示方式。</li>
+</ol>
+<p>示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line">* * *</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<hr>
+<h3 id="12表格"><a href="#12表格" class="headerlink" title="12表格"></a>12表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">上面空一行下面空两行</span><br><span class="line"></span><br><span class="line">Heading | Heading | Heading</span><br><span class="line">------- | ------- | -------</span><br><span class="line">Cell   |  Cell   |  Cell</span><br><span class="line">Cell   |  Cell   |  Cell</span><br><span class="line"></span><br><span class="line">添加边框:</span><br><span class="line"></span><br><span class="line">| Heading | Heading | Heading |</span><br><span class="line">| ------- | ------- | ------- |</span><br><span class="line">|   Cell  |   Cell  |   Cell  |</span><br><span class="line">|   Cell  |   Cell  |   Cell  |</span><br><span class="line"></span><br><span class="line">对齐方式:</span><br><span class="line"></span><br><span class="line">Heading | Heading | Heading</span><br><span class="line">:----- | :----: | ------:</span><br><span class="line">Left   | Center | Right</span><br><span class="line">Left   | Center | Right</span><br></pre></td></tr></table></figure>
+
+<p>上面空一行下面空两行</p>
+<table>
+<thead>
+<tr>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+<tr>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+</tbody></table>
+<p>添加边框:</p>
+<table>
+<thead>
+<tr>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+<tr>
+<td>Cell</td>
+<td>Cell</td>
+<td>Cell</td>
+</tr>
+</tbody></table>
+<p>对齐方式:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Heading</th>
+<th align="center">Heading</th>
+<th align="right">Heading</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Left</td>
+<td align="center">Center</td>
+<td align="right">Right</td>
+</tr>
+<tr>
+<td align="left">Left</td>
+<td align="center">Center</td>
+<td align="right">Right</td>
+</tr>
+</tbody></table>
 
       </div>
+      
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-11-21T01:02:20+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>更新于 2019年11月21日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%99%E7%A8%8B/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>教程</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/markdown/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>markdown</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://lwk4you.github.io/2019/11/21/Markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/&title=Markdown语法记录 | 刘伟康の博客&pics=http://p1.music.126.net/v9FG3CVqxHQGYzG98AiQNg==/18804947371894153.jpg?param=180y180&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lwk4you.github.io/2019/11/21/Markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/&title=Markdown语法记录 | 刘伟康の博客&pics=http://p1.music.126.net/v9FG3CVqxHQGYzG98AiQNg==/18804947371894153.jpg?param=180y180&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://lwk4you.github.io/2019/11/21/Markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/&title=Markdown语法记录 | 刘伟康の博客&pics=http://p1.music.126.net/v9FG3CVqxHQGYzG98AiQNg==/18804947371894153.jpg?param=180y180&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
       
        
         <div style="margin-top:10px;">
@@ -437,7 +655,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.5k字</span>
+        <span class="post-count">1.3k字</span>
       </span>
     </span>
 
@@ -446,11 +664,35 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
         
+      
+          <div class="prev-next">
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/2019/11/05/20191105/" rel="prev" title="两个小摆件">
+                                  
+                                      两个小摆件
+                                  
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 生活记录</a> <a class="tag" href="/tags/%E5%B0%8F%E7%89%A9%E4%BB%B6/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 小物件</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+          </div>
       
     </section>
   </article>
@@ -485,6 +727,13 @@
 <!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
 
+
+  <script>
+    window.subData = {
+      title: 'Markdown语法记录',
+      tools: true
+    }
+  </script>
 
 
 </div>
@@ -576,6 +825,20 @@
           
             
               
+  <section class='widget toc-wrapper'>
+    
+<header class='material'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content material'>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#此文档在更新时可能会被覆盖或删除"><span class="toc-text">此文档在更新时可能会被覆盖或删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-标题"><span class="toc-text">1.标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-引用"><span class="toc-text">2.引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-代码块"><span class="toc-text">3 代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-行内代码"><span class="toc-text">4 行内代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-链接"><span class="toc-text">5 链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-数学公式"><span class="toc-text">6 数学公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-导入图片"><span class="toc-text">7 导入图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Todo-List"><span class="toc-text">8 Todo List</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-粗体，斜体，高亮和删除线"><span class="toc-text">9 粗体，斜体，高亮和删除线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-列表"><span class="toc-text">10 列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#例1：有序列表"><span class="toc-text">例1：有序列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例2：无序列表"><span class="toc-text">例2：无序列表</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-分割线"><span class="toc-text">11 分割线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12表格"><span class="toc-text">12表格</span></a></li></ol>
+    </div>
+  </section>
+
 
             
           
@@ -923,6 +1186,18 @@
           
             
               
+  <section class='widget related_posts'>
+    
+<header class='material'>
+  <div><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;相关文章</div>
+  
+</header>
+
+    <div class="content material">
+      
+    </div>
+  </section>
+
 
             
           
