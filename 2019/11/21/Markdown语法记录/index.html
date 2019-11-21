@@ -419,6 +419,8 @@
 
 <h3 id="4-行内代码"><a href="#4-行内代码" class="headerlink" title="4 行内代码"></a>4 行内代码</h3><p>使用``表示行内代码。本页部分文字中间的英文字母就是使用行内代码标记标记的。</p>
 <p>示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是 `javascript` 代码</span><br></pre></td></tr></table></figure>
+
 <p>这是 <code>javascript</code> 代码</p>
 <h4 id="5-链接"><a href="#5-链接" class="headerlink" title="5 链接"></a>5 链接</h4><p>使用 <code>[](link)</code> 表示行内链接。其中：</p>
 <ul>
@@ -426,9 +428,9 @@
 <li><code>link</code> 为链接地址。</li>
 </ul>
 <p>示例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我觉得[Markdown](https://appsto.re/cn/jK8Cbb.i)真是个棒棒哒的编辑器😊.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我觉得[刘伟康](https://lwk4you.com)真是个帅帅的博主😊.</span><br></pre></td></tr></table></figure>
 
-<p>我觉得<a href="https://appsto.re/cn/jK8Cbb.i" target="_blank" rel="noopener">Markdown</a>真是个棒棒哒的编辑器😊.</p>
+<p>我觉得<a href="https://lwk4you.com" target="_blank" rel="noopener">刘伟康</a>真是个帅帅的博主😊.</p>
 <h3 id="6-数学公式"><a href="#6-数学公式" class="headerlink" title="6 数学公式"></a>6 数学公式</h3><p><code>$</code>包围的区块将会解析为数学公式，连续的<code>$$</code>将独占一行并居中显示</p>
 <p>示例</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当 $a \ne 0$, 此方程式有两个解 $ax^2 + bx + c = 0$，他们是 </span><br><span class="line"></span><br><span class="line">$$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.$$</span><br></pre></td></tr></table></figure>
@@ -450,6 +452,8 @@
 
 <p><img src="https://i.loli.net/2019/11/16/h4lWxQbjvUwN7XZ.jpg" alt="Markdown"></p>
 <h3 id="8-Todo-List"><a href="#8-Todo-List" class="headerlink" title="8 Todo List"></a>8 Todo List</h3><p>小写x表示已完成， 空格表示未完成</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>[x] 支持数学公式</span><br><span class="line"><span class="bullet">- </span>[x] 支持TodoList</span><br><span class="line"><span class="bullet">- </span>[x] 支持自定义样式</span><br><span class="line"><span class="bullet">- </span>[ ] 支持自定义图床</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><input checked="" disabled="" type="checkbox"> 支持数学公式</li>
 <li><input checked="" disabled="" type="checkbox"> 支持TodoList</li>
@@ -725,6 +729,44 @@
 
 
 <!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+  <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
+    }
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 
 
 
