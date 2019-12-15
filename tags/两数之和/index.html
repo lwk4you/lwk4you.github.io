@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Category: 记录 | 刘伟康の博客</title>
+  <title>Tag: 两数之和 | 刘伟康の博客</title>
   
   <meta name="keywords" content="个人博客">
   
@@ -308,8 +308,8 @@
       
         
   <h2 class="title">
-    <a href="/2019/11/05/20191105/">
-      两个小摆件
+    <a href="/2019/12/14/%E6%AF%8F%E6%97%A5leetCode%E4%B9%8B%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+      每日leetCode之两数之和
     </a>
   </h2>
 
@@ -339,7 +339,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-11-05</p>
+    <p>2019-12-14</p>
   </a>
 </div>
 
@@ -349,9 +349,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E7%94%9F%E6%B4%BB/%E8%AE%B0%E5%BD%95/' rel="nofollow">
+    <a href='/categories/%E5%AD%A6%E4%B9%A0/leetCode/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>生活&nbsp;/&nbsp;记录</p>
+      <p>学习&nbsp;/&nbsp;leetCode</p>
     </a>
   </div>
 
@@ -373,10 +373,13 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <img src="https://s2.ax1x.com/2019/11/06/M9Hdm9.jpg" alt="M9Hdm9.jpg" border="0" height=200/>
+      <p>对于一个想要提升自身编程水平的程序员来说，leetCode是一个非常重要的题库。涉及的算法题不仅能让你应付面试中必考的算法题，也对自己代码的质量和算法优缺点有比较明显<br>的了解。</p>
+<p>所以现在会定期刷算法题，当然估计不会像学生党天天刷。作为一个半路出家的java工程师，会保证定期定量的刷，习惯和坚持才是最好的老师。</p>
+<p>目前主要用的是leetCode的vsCode插件，非常好用，节点用的是国内的，可以测试提交查看结果，关联自己的leetCode非常方便。</p>
+<p>我会优先记录自己思考这道题的思路，有必要会看官网其他的思路，一起进步。</p>
       
         <div class="readmore">
-          <a href="/2019/11/05/20191105/" class="flat-box">
+          <a href="/2019/12/14/%E6%AF%8F%E6%97%A5leetCode%E4%B9%8B%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -386,9 +389,11 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 生活记录</a>
+          <a href="/tags/leetCode/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> leetCode</a>
         
-          <a href="/tags/%E5%B0%8F%E7%89%A9%E4%BB%B6/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 小物件</a>
+          <a href="/tags/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 两数之和</a>
+        
+          <a href="/tags/twoSum/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> twoSum</a>
         
       </div>
     
@@ -405,13 +410,50 @@
     <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
     
     
+      <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
+    }
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    
 
   
 
 
     
   
-
 </div>
 <aside class='l_side'>
   
