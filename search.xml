@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>微服务入门</title>
+      <link href="/2020/03/03/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%85%A5%E9%97%A8/"/>
+      <url>/2020/03/03/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%85%A5%E9%97%A8/</url>
+      
+        <content type="html"><![CDATA[<p>微服务是目前的互联网公司的主要架构方式，springCloud是目前互联网企业的主流框架，系统学习springCloud之前，先来学习下微服的内容。</p><a id="more"></a><h2 id="微服务是什么？"><a href="#微服务是什么？" class="headerlink" title="微服务是什么？"></a>微服务是什么？</h2><p>原文： <a href="https://www.martinfowler.com/articles/microservices.html" target="_blank" rel="noopener">https://www.martinfowler.com/articles/microservices.html</a></p><p>汉化：<a href="https://www.cnblogs.com/liuning8023/p/4493156.html" target="_blank" rel="noopener">https://www.cnblogs.com/liuning8023/p/4493156.html</a></p><ul><li>就目前而言，对于微服务，业界没有一个统一的，标准的定义</li><li>但通常而言，微服务架构是一种架构模式，或者说是一种架构风格，<strong>他提倡将单一的应用程序划分为一组小的服务</strong>，每个服运行在其独立的自己的进程内，服务之间相互协调，互相配置，为用户提供最终价值。服务之间采用轻量级的通信机制互相沟通，每个服务都围绕着具体的业务进行构建，并且能够被独立的部署到生产环境中，另外，应尽量避免统一的，集中式的服务管理机制，对具体的一个服务而言，应根据业务上下文，选择合适的语言，工具对其进行构建，可以有一个非常轻量级的集中式管理来协调这些服务，可以使用不同的语言来编写服务，也可以使用不同的数据存储;</li></ul><p>一篇博客有详细的微服的说明,解释了微服务的应用场景</p><blockquote><p><a href="https://www.cnblogs.com/skabyy/p/11396571.html" target="_blank" rel="noopener">https://www.cnblogs.com/skabyy/p/11396571.html</a></p></blockquote><h2 id="微服务于微服务架构"><a href="#微服务于微服务架构" class="headerlink" title="微服务于微服务架构"></a>微服务于微服务架构</h2><h3 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h3><p>强调的是服务的大小。他关注的是某一个点，是具体解决某一个问题、提供落地对应服务的一个服务应用，狭义的看，可以看作是IDEA中的一个个微服务工程，或者Module</p><h3 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h3><p>一种新的架构形式，Martin Fowler,2014提出</p><p>微服务架构是一种架构模式，他提倡将单一应用程序划分成一组小的服务，服务之间相互协调，互相配合，为用户提供最终价值。每个服务运行在其独立的进程中，服务与服务之间采用轻量级的通信机制互相协作，每个服务都围绕着具体的业务进行构建，并且能够被独立的部署到生产环境中，另外，应尽量避免统一的，集中式的服务管理机制，对具体的一个服务而言，应根据业务上下文，选择合适的语言，工具对其进行构建。</p><h2 id="微服务的优缺点"><a href="#微服务的优缺点" class="headerlink" title="微服务的优缺点"></a>微服务的优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul><li>单一职责原则</li><li>每个服务足够内聚，足够小，代码容易理解，这样能聚焦一个指定的业务功能或业务需求；</li><li>开发简单，开发效率高，一个服务可能就是专一的只干一件事；</li><li>微服务能够被小团队单独开发，这个小团队是2-5人的开发人员组成；</li><li>微服务是松耦合的，是有功能意义的服务，无论是在开发阶段或部署阶段都是独立的；</li><li>微服务能使用不同的语言开发；</li><li>易于和第三方集成，微服务允许容易且灵活的方式自动集成部署，通过持续集成工具，如Jenkins，Hudson，bamboo</li><li>微服务易于被一个开发人员理解，修改和维护，这样的小团队能够更关注自己的工作成果。无需通过合作才能体现价值</li><li>微服务允许你利用融合最新技术</li><li>微服务只是业务逻辑的代码，不会和HTML,CSS或其他界面混合</li><li>每个微服务都有自己的存储能力，可以有自己的数据库，也可以有统一的数据库</li></ul><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul><li>开发人员要处理分布式系统的复杂性</li><li>多服务运维难度，随着服务的增加，运维的压力也在增大</li><li>系统部署依赖</li><li>服务间通信成本</li><li>数据一致性</li><li>系统集成测试</li><li>性能监控…</li></ul><h2 id="微服务的而技术栈"><a href="#微服务的而技术栈" class="headerlink" title="微服务的而技术栈"></a>微服务的而技术栈</h2><table><thead><tr><th><strong>微服务条目</strong></th><th><strong>落地技术</strong></th></tr></thead><tbody><tr><td>服务开发</td><td>SpringBoot,Spring,SpringMVC</td></tr><tr><td>服务配置与管理</td><td>Netfix公司的Archaius、阿里的Dimond等</td></tr><tr><td>服务注册与发现</td><td>Eureka、Consul、Zookeeper等</td></tr><tr><td>服务调用</td><td>Rest、RPC、gRPC</td></tr><tr><td>服务熔断器</td><td>Hystrix、Envoy等</td></tr><tr><td>负载均衡</td><td>Ribbon、Nginx</td></tr><tr><td>服务接口调用（客户端调用服务端的简化工具）</td><td>Feign等</td></tr><tr><td>消息队列</td><td>Kafka、RabbitMQ、ActiveMQ等</td></tr><tr><td>服务配置中心管理</td><td>SpringCloudConfig、Chef等</td></tr><tr><td>服务路由（API网关）</td><td>Zuul等</td></tr><tr><td>服务监控</td><td>Zabbix、Nagious、Metrics、Specatator等</td></tr><tr><td>全链路追踪</td><td>Zipkin、Brave、Dapper等</td></tr><tr><td>服务部署</td><td>Docker、OpenStack、Kubernetes等</td></tr><tr><td>数据流操作开发包</td><td>SpringCloud Stream(封装与redis、Rabbit、Kafka等发送接收消息)</td></tr><tr><td>事件消息总线</td><td>SpringCloud Bus</td></tr></tbody></table><h2 id="为什么选择SpringCloud作为微服务架构"><a href="#为什么选择SpringCloud作为微服务架构" class="headerlink" title="为什么选择SpringCloud作为微服务架构"></a>为什么选择SpringCloud作为微服务架构</h2><h3 id="1、选型依据"><a href="#1、选型依据" class="headerlink" title="1、选型依据"></a>1、选型依据</h3><ul><li>整体解决方案和框架成熟度</li><li>社区热度</li><li>可维护性</li><li>学习曲线</li></ul><h3 id="2、当前各大IT公司用的微服务架构有哪些"><a href="#2、当前各大IT公司用的微服务架构有哪些" class="headerlink" title="2、当前各大IT公司用的微服务架构有哪些"></a>2、当前各大IT公司用的微服务架构有哪些</h3><ul><li>阿里：dubbo+HFS</li><li>京东：JSF</li><li>新浪: Motan</li><li>当当网：DubboX</li><li>…</li></ul><h3 id="3、各微服务框架对比"><a href="#3、各微服务框架对比" class="headerlink" title="3、各微服务框架对比"></a>3、各微服务框架对比</h3><table><thead><tr><th>功能点/服务框架</th><th>Netflix/SpringCloud</th><th>Motan</th><th>gRPC</th><th>Thrift</th><th>Dubbo</th><th>dubboX</th></tr></thead><tbody><tr><td>功能定位</td><td>完整的微服务框架</td><td>RPC框架，但整合了ZK或Consul，实现集群环境的基本服务注册/发现</td><td>RPC框架</td><td>RPC框架</td><td>服务框架</td><td></td></tr><tr><td>支持Rest</td><td>是，Ribbon支持多种可插拔的序列化选择</td><td>否</td><td>否</td><td>否</td><td>否</td><td></td></tr><tr><td>支持RPC</td><td>否</td><td>是（Hession2）</td><td>是</td><td>是</td><td>是</td><td></td></tr><tr><td>支持多语言</td><td>是（Rest形式）</td><td>否</td><td>是</td><td>是</td><td>否</td><td></td></tr><tr><td>负载均衡</td><td>是（服务端zuul+客户端Ribbon）,zuul-服务，动态路由，云端负载均衡Eureka(针对中间层服务器)</td><td>是（客户端）</td><td>否</td><td>否</td><td>是（客户端）</td><td></td></tr><tr><td>配置服务</td><td>Netflix Archaius,Spring Cloud config Server集中配置</td><td>是（zookeeper提供）</td><td>否</td><td>否</td><td>否</td><td></td></tr><tr><td>服务调用链监控</td><td>是（zuul）,zuul提供边缘服务，API网关</td><td>否</td><td>否</td><td>否</td><td></td><td></td></tr><tr><td>高可用/容错</td><td>是（服务端Hystrix+客户端Ribbon）</td><td>是</td><td>否</td><td>否</td><td>是（客户端）</td><td></td></tr><tr><td>典型应用案例</td><td>Netflix</td><td>Sina</td><td>Google</td><td>Facebook</td><td></td><td></td></tr><tr><td>社区活跃程度</td><td>高</td><td>一般</td><td>高</td><td>一般</td><td>2017年后重新开始维护，之前中断了5年</td><td></td></tr><tr><td>学习难度</td><td>中</td><td>低</td><td>高</td><td>高</td><td>低</td><td></td></tr><tr><td>文档丰富程度</td><td>高</td><td>一般</td><td>一般</td><td>一般</td><td>高</td><td></td></tr><tr><td>其他</td><td>Spring Cloud Bus为我们的应用程序带来更多管理端点</td><td>支持降级</td><td>Netflix内部在开发集成gRPC</td><td>IDL定义</td><td>实践的公司比较多</td><td></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> spring-cloud </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> spring-cloud </tag>
+            
+            <tag> 实战 </tag>
+            
+            <tag> 微服务 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>每日leetCode之两数之和</title>
       <link href="/2019/12/14/%E6%AF%8F%E6%97%A5leetCode%E4%B9%8B%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
       <url>/2019/12/14/%E6%AF%8F%E6%97%A5leetCode%E4%B9%8B%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
@@ -27,6 +58,8 @@
             <tag> 两数之和 </tag>
             
             <tag> twoSum </tag>
+            
+            <tag> easy </tag>
             
         </tags>
       
